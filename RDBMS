@@ -1,0 +1,80 @@
+# Relational databases
+
+### 1. What is a Relational Database?
+
+* A **Relational Database** stores data in **tables**.
+* Tables are connected with each other using **relationships**.
+* Each table has **rows** and **columns**.
+
+---
+
+### 2. Why Called “Relational”?
+
+* Because tables are **related (connected)** to each other.
+* Connection is made using **keys** (like ID).
+
+---
+
+### 3. Table Structure
+
+Example: **Students Table**
+
+| StudentID | Name | Class |
+| --------- | ---- | ----- |
+| 1         | Amit | 8     |
+| 2         | Neha | 9     |
+
+Example: **Marks Table**
+
+| StudentID | Subject | Marks |
+| --------- | ------- | ----- |
+| 1         | Maths   | 85    |
+| 2         | Science | 90    |
+
+Both tables are connected using **StudentID**.
+
+---
+
+### 4. Keys in Relational Database
+
+| Key Type    | Meaning                      |
+| ----------- | ---------------------------- |
+| Primary Key | Unique ID in a table         |
+| Foreign Key | Key that connects two tables |
+
+Here, **StudentID** is:
+
+* Primary Key in Students table
+* Foreign Key in Marks table
+
+---
+
+### 5. Advantages
+
+* Data is organized
+* Avoids duplicate data
+* Easy to search and update
+* Data accuracy is better
+
+---
+
+### 6. Real Life Examples
+
+1. School database connects students with marks.
+2. Bank system connects customers with accounts.
+3. Shopping app connects users with orders.
+
+---
+
+### 7. Simple SQL Example
+
+```sql
+SELECT Students.Name, Marks.Subject, Marks.Marks
+FROM Students
+JOIN Marks
+ON Students.StudentID = Marks.StudentID;
+```
+
+This shows student names with their marks.
+
+---
